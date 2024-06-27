@@ -9,20 +9,23 @@ import { PageModule } from './page/page.module';
 import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { AuthModule } from './auth/auth.module';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NopagefoundComponent,
+    NopagefoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
     PageModule,
-    AuthModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [
+    provideCharts(withDefaultRegisterables())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

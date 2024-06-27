@@ -7,26 +7,26 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { PageComponent } from './page.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-
-
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ProgressComponent,
-    Grafica1Component,
-    PageComponent
+    PageComponent,
+    Grafica1Component
   ],
   exports: [
     DashboardComponent,
     ProgressComponent,
-    Grafica1Component,
-    PageComponent
+    PageComponent,
+    Grafica1Component
   ],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    ComponentsModule,
   ]
 })
 export class PageModule { }
