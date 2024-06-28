@@ -8,19 +8,22 @@ import { PageComponent } from './page.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ProgressComponent,
     PageComponent,
-    Grafica1Component
+    Grafica1Component,
+    AccountSettingsComponent
   ],
   exports: [
     DashboardComponent,
     ProgressComponent,
     PageComponent,
-    Grafica1Component
+    Grafica1Component,
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,

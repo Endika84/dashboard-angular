@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ChartData } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 
@@ -9,7 +9,8 @@ import { BaseChartDirective } from 'ng2-charts';
   templateUrl: './dona.component.html',
   styles: ``
 })
-export class DonaComponent implements AfterViewInit{
+export class DonaComponent implements OnChanges{
+  
   
 
   @Input()
@@ -23,7 +24,8 @@ export class DonaComponent implements AfterViewInit{
 
   public doughnutChartData?: ChartData<'doughnut'>;
 
-  ngAfterViewInit(): void {
+
+  ngOnChanges(changes: SimpleChanges): void {
     this.doughnutChartData = {
       labels: this.doughnutChartLabels,
       datasets: [
